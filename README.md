@@ -1,7 +1,11 @@
-# Installation
+# Alikay's Neovim Configuration
+
+My personal config for neovim using [nvf](https://github.com/NotAShelf/nvf).
+
+## Installation
 
 This configuration is written entirely in nix using
-[NVF](https://github.com/NotAShelf/nvf), which means it can be run in a
+[nvf](https://github.com/NotAShelf/nvf), which means it can be run in a
 temporary shell with
 
 ```bash
