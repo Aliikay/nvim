@@ -42,6 +42,16 @@
                   };
                 };
 
+                # Enable clipboard integration
+                clipboard = {
+                  providers.wl-copy.enable = true;
+                };
+
+                # Enable notes plugins
+                notes = {
+                  todo-comments.enable = true;
+                };
+
                 # Enable Treesitter
                 treesitter.enable = true;
 
@@ -68,6 +78,10 @@
                   trouble.enable = true;
                 };
 
+                # Enable cheatsheet
+                binds.cheatsheet.enable = true;
+
+                # Enable Telescope
                 telescope = {
                   enable = true;
                   mappings = {
@@ -88,11 +102,24 @@
                   nvim-cmp.enable = true;
                 };
 
+                # Autopairs
+                autopairs = {
+                  nvim-autopairs.enable = true;
+                };
+
                 # Filetree
                 filetree = {
                   nvimTree = {
                     enable = true;
+                    openOnSetup = false;
+
                     mappings.toggle = "<C-e>";
+
+                    setupOpts = {
+                      git.enable = true;
+
+                      diagnostics.enable = true;
+                    };
                   };
                 };
               };
