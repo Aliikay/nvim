@@ -25,11 +25,21 @@
                   smartindent = true; # Smart autoindent (improves on autoindent for code)
                   softtabstop = 4; # Number of spaces for <Tab> in insert mode (backspace deletes 4 spaces)
                 };
+
                 # Enable custom theming options
                 theme = {
                   enable = true;
                   name = "gruvbox";
                   style = "dark";
+                };
+
+                # Enable diagnostics
+                diagnostics = {
+                  enable = true;
+                  config = {
+                    update_in_insert = true;
+                    virtual_text = true;
+                  };
                 };
 
                 # Enable Treesitter
@@ -58,7 +68,12 @@
                   trouble.enable = true;
                 };
 
-                telescope.enable = true;
+                telescope = {
+                  enable = true;
+                  mappings = {
+                    findFiles = "<C-p>";
+                  };
+                };
 
                 # Statusline
                 statusline = {
@@ -75,7 +90,10 @@
 
                 # Filetree
                 filetree = {
-                  neo-tree.enable = true;
+                  nvimTree = {
+                    enable = true;
+                    mappings.toggle = "<C-e>";
+                  };
                 };
               };
             }
