@@ -16,7 +16,6 @@
           modules = [
             {
               config.vim = {
-                # Options
                 options = {
                   tabstop = 4; # Number of spaces a <Tab> counts for
                   shiftwidth = 4; # Number of spaces for autoindent (>>, <<, etc.)
@@ -31,6 +30,23 @@
                   enable = true;
                   name = "gruvbox";
                   style = "dark";
+                };
+
+                # UI Settings
+                ui = {
+                  colorizer.enable = true;
+                  colorizer.setupOpts.filetypes = {
+                    "*" = {
+                      RGB = true;
+                      RRGGBB = true;
+                      RRGGBBAA = true;
+
+                      css = true;
+                      css_fn = true;
+                      sass = true;
+                      hsl_fn = true;
+                    };
+                  };
                 };
 
                 # Enable diagnostics
