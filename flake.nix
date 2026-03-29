@@ -107,6 +107,14 @@
                   nvim-autopairs.enable = true;
                 };
 
+                # Tab Line
+                tabline = {
+                  nvimBufferline = {
+                    enable = true;
+                    setupOpts.options.always_show_bufferline = false;
+                  };
+                };
+
                 # Filetree
                 filetree = {
                   nvimTree = {
@@ -122,6 +130,23 @@
                     };
                   };
                 };
+
+                # Keymaps
+                keymaps = [
+                  {
+                    key = "<C-[>";
+                    mode = ["n"];
+                    silent = true;
+                    action = ":bprev<CR>";
+                  }
+
+                  {
+                    key = "<C-]>";
+                    mode = ["n"];
+                    silent = true;
+                    action = ":bnext<CR>";
+                  }
+                ];
               };
             }
           ];
